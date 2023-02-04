@@ -28,7 +28,13 @@ export default function Button(props) {
         </a>
       );
       } else {
-
+        return (
+          <link to={props.href} 
+            className={className.join(" ")} 
+            style={props.style} onClick={onClick}>
+          {props.children}
+          </link>
+        )
       }
     }
 
